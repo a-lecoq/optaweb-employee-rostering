@@ -60,6 +60,28 @@ jobs:
             **/cypress/videos/**
             **/target/*.log
             **/target/*.zip
+
+      - name: release
+        uses: actions/create-release@v1
+        id: create_release
+        with:
+          draft: false
+          prerelease: false
+          release_name: ${{ steps.version.outputs.version }}
+          tag_name: ${{ github.ref }}
+          body_path: CHANGELOG.md
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: upload java artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./optaweb-employee-rostering-standalone/target/optaweb-employee-rostering-standalone-8.21.0-SNAPSHOT-quarkus-app.zip
+          asset_name: optaweb-employee-rostering-standalone-8.21.0-SNAPSHOT-quarkus-app.zip
+          asset_content_type: application/gzip
+
       # check that git working tree is clean after running npm install via a frontend-maven-plugin
       # the git command returns 1 and fails the build if there are any uncommitted changes
       - name: Check for clean working tree
