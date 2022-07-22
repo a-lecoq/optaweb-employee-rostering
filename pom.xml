@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.optaplanner</groupId>
     <artifactId>optaplanner-build-parent</artifactId>
-    <version>8.21.0-SNAPSHOT</version>
+    <version>8.24.1.Final</version>
     <relativePath/>
   </parent>
 
@@ -14,9 +14,10 @@
   <artifactId>optaweb-employee-rostering</artifactId>
   <packaging>pom</packaging>
 
-  <name>OptaWeb Employee Rostering as a Service Parent</name>
+  <name>[ABANDONED] OptaWeb Employee Rostering as a Service Parent</name>
   <description>
     OptaWeb Employee Rostering as a Service with OptaPlanner on OpenShift 4.
+    This project is no longer maintained.
   </description>
   <url>https://www.optaplanner.org</url>
   <inceptionYear>2017</inceptionYear>
@@ -46,8 +47,8 @@
     <sonar.projectKey>optaweb-employee-rostering</sonar.projectKey>
     <sonar.moduleKey>${project.artifactId}</sonar.moduleKey>
 
-    <version.frontend-maven-plugin>1.11.3</version.frontend-maven-plugin>
-    <version.node>v12.16.2</version.node>
+    <version.frontend-maven-plugin>1.12.1</version.frontend-maven-plugin>
+    <version.node>v16.2.0</version.node>
     <version.npm>7.15.1</version.npm>
     <version.org.apache.poi>4.1.2</version.org.apache.poi>
   </properties>

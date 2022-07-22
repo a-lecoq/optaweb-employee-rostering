@@ -1,26 +1,16 @@
 :projectKey: optaweb-employee-rostering
-:sonarBadge: image:https://sonarcloud.io/api/project_badges/measure?project={projectKey}
-:sonarLink: link="https://sonarcloud.io/dashboard?id={projectKey}"
+
+*This project is no longer maintained.*
+Visit https://github.com/kiegroup/optaplanner-quickstarts/tree/stable/use-cases/employee-scheduling[OptaPlanner Employee Rostering Quickstart] to see how to integrate https://www.optaplanner.org/[OptaPlanner] in your application.
+
 
 = Employee Rostering Optimization as a Service
 
-image:https://travis-ci.com/kiegroup/optaweb-employee-rostering.svg?branch=main[
-"Build Status", link="https://travis-ci.com/kiegroup/optaweb-employee-rostering"]
-image:https://img.shields.io/badge/stackoverflow-ask_question-orange.svg?logo=stackoverflow[
-"Ask question on Stack Overflow", link="https://stackoverflow.com/questions/tagged/optaweb-employee-rostering"]
-image:https://img.shields.io/badge/zulip-join_chat-brightgreen.svg?logo=zulip[
+image:https://img.shields.io/badge/zulip-join_chat-brightgreen.svg?logo=zulip&style=for-the-badge[
 "Join Zulip Chat", link="https://kie.zulipchat.com/#narrow/stream/232679-optaplanner"]
-
-{sonarBadge}&metric=alert_status["Quality Gate Status", {sonarLink}]
-{sonarBadge}&metric=reliability_rating["Reliability Rating", {sonarLink}]
-{sonarBadge}&metric=security_rating["Security Rating", {sonarLink}]
-{sonarBadge}&metric=sqale_rating["Maintainability Rating", {sonarLink}]
-{sonarBadge}&metric=ncloc["Lines of Code", {sonarLink}]
-{sonarBadge}&metric=coverage["Coverage", {sonarLink}]
+image:https://img.shields.io/github/license/kiegroup/optaweb-employee-rostering?style=for-the-badge&logo=apache["License", link="https://www.apache.org/licenses/LICENSE-2.0"]
 
 An end-to-end https://www.optaplanner.org/[OptaPlanner] web application ready to deploy on https://www.openshift.com/[OpenShift 4].
-
-See https://www.youtube.com/watch?v=sOWC4qrXxFk[the video demo].
 
 == Building
 
@@ -142,7 +132,7 @@ oc start-build frontend --from-dir=docker --follow
 
 === Code formatter
 
-Both IntelliJ and Eclipse formatters are available here: https://github.com/kiegroup/droolsjbpm-build-bootstrap/tree/main/ide-configuration
+IntelliJ, Eclipse and VS Code formatters https://github.com/kiegroup/optaplanner/blob/main/build/optaplanner-ide-config/ide-configuration.adoc#ide-setup-instructions[IDE setup instructions].
 
 === Backend
 
@@ -151,4 +141,4 @@ Configure your IDE to run the main class, which is in
 
 === Frontend
 
-Run `npm install` and then `npm start` in the `optaweb-employee-rostering-frontend` directory.
+Run `npm install` and then `npm start` in the `optaweb-employee-rostering-frontend` directory. You can run `npm run lint` locally to see all code style issues. You can run `npm run lint:fix` to reformat the code and fix issues without using an IDE.
